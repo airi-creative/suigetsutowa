@@ -45,31 +45,34 @@ runtimeStyle.textContent = `
     }
 
     .mode-card {
+      display: flex !important;
+      flex-direction: column !important;
       background: rgba(251, 250, 246, 0.96);
     }
 
     .mode-card img {
-      width: 100%;
-      aspect-ratio: 2 / 1;
-      min-height: auto;
-      border-width: 0 0 1px;
-      border-radius: 8px 8px 0 0;
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+      aspect-ratio: auto !important;
+      border-width: 0 0 1px !important;
+      border-radius: 8px 8px 0 0 !important;
       background: #f7f2ea;
-      object-fit: contain;
+      object-fit: cover !important;
     }
 
     .mode-card div {
-      position: relative;
-      z-index: 2;
-      width: calc(100% - 32px);
-      min-height: 0;
-      margin: 0 auto 16px;
-      padding: 16px;
-      border: 1px solid rgba(221, 214, 201, 0.72);
-      border-top: 0;
-      border-radius: 0 0 6px 6px;
-      background: rgba(251, 250, 246, 0.98);
-      box-shadow: none;
+      position: static !important;
+      z-index: 1;
+      width: 100% !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 18px 18px 20px !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: #fbfaf6 !important;
+      box-shadow: none !important;
     }
 
     .mode-card span {

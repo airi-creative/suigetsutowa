@@ -23,12 +23,18 @@ document.querySelectorAll("img").forEach((image) => {
   }
 });
 
-const avatarFitStyle = document.createElement("style");
-avatarFitStyle.textContent = `
+const runtimeStyle = document.createElement("style");
+runtimeStyle.textContent = `
   .hero-portrait img {
     width: 178px;
     margin-top: 7px;
     border-width: 5px;
+  }
+
+  .mode-card p {
+    color: #3f3a32;
+    font-weight: 500;
+    line-height: 1.75;
   }
 
   @media (max-width: 620px) {
@@ -37,9 +43,39 @@ avatarFitStyle.textContent = `
       margin-top: 7px;
       border-width: 5px;
     }
+
+    .mode-card {
+      background: rgba(251, 250, 246, 0.96);
+    }
+
+    .mode-card div {
+      position: relative;
+      z-index: 2;
+      padding: 18px 18px 20px;
+      border-top: 1px solid rgba(221, 214, 201, 0.72);
+      background: rgba(251, 250, 246, 0.94);
+      box-shadow: 0 -14px 28px rgba(251, 250, 246, 0.72);
+    }
+
+    .mode-card span {
+      color: #9a672c;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .mode-card h4 {
+      color: #1f1f1b;
+      font-size: 23px;
+      font-weight: 500;
+    }
+
+    .mode-card p {
+      color: #343029;
+      font-size: 15px;
+    }
   }
 `;
-document.head.append(avatarFitStyle);
+document.head.append(runtimeStyle);
 
 const revealItems = document.querySelectorAll(".reveal");
 

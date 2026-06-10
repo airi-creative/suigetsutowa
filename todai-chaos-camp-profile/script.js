@@ -1,5 +1,23 @@
 const revealItems = document.querySelectorAll(".reveal");
 
+const avatarFitStyle = document.createElement("style");
+avatarFitStyle.textContent = `
+  .hero-portrait img {
+    width: 178px;
+    margin-top: 7px;
+    border-width: 5px;
+  }
+
+  @media (max-width: 620px) {
+    .hero-portrait img {
+      width: 146px;
+      margin-top: 7px;
+      border-width: 5px;
+    }
+  }
+`;
+document.head.append(avatarFitStyle);
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {

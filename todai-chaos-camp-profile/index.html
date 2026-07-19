@@ -46,5 +46,18 @@
 
     <section class="contact" id="contact"><div class="wrap"><div class="contact-inner"><div><p class="eyebrow">07 / Contact</p><h2>未完成の問いから、<br>一緒に考える。</h2><p class="contact-note">研究、制作、コラボレーションについて、<br>お気軽にご連絡ください。</p></div><a class="contact-email" href="mailto:zhangzhuoquntaku@gmail.com">zhangzhuoquntaku@gmail.com</a></div><div class="footer"><span>© 2026 水月桃和</span><span>Calligraphy · Design · Technology · Research</span></div><a class="back-to-top" href="#top">BACK TO TOP ↑</a></div></section>
   </main>
+  <script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    document.addEventListener('click', (event) => {
+      if (mobileMenu?.open && !mobileMenu.contains(event.target)) {
+        mobileMenu.removeAttribute('open');
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') mobileMenu?.removeAttribute('open');
+    });
+  </script>
 </body>
 </html>
